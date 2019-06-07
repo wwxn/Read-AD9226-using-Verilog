@@ -1,0 +1,16 @@
+Fitter Status : Successful - Wed Jun 05 20:15:36 2019
+Quartus II Version : 11.0 Build 157 04/27/2011 SJ Full Version
+Revision Name : ep2adc
+Top-level Entity Name : ep2adc
+Family : Cyclone II
+Device : EP2C5T144C8
+Timing Models : Final
+Total logic elements : 3 / 4,608 ( < 1 % )
+    Total combinational functions : 3 / 4,608 ( < 1 % )
+    Dedicated logic registers : 3 / 4,608 ( < 1 % )
+Total registers : 3
+Total pins : 15 / 89 ( 17 % )
+Total virtual pins : 0
+Total memory bits : 0 / 119,808 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 26 ( 0 % )
+Total PLLs : 1 / 2 ( 50 % )

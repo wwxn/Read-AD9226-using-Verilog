@@ -1,0 +1,570 @@
+TimeQuest Timing Analyzer report for ep2adc
+Wed Jun 05 20:15:38 2019
+Quartus II Version 11.0 Build 157 04/27/2011 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'inst1|altpll_component|pll|clk[0]'
+ 12. Slow Model Hold: 'inst1|altpll_component|pll|clk[0]'
+ 13. Slow Model Minimum Pulse Width: 'inst1|altpll_component|pll|clk[0]'
+ 14. Slow Model Minimum Pulse Width: 'inclk0'
+ 15. Setup Times
+ 16. Hold Times
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Fast Model Setup Summary
+ 20. Fast Model Hold Summary
+ 21. Fast Model Recovery Summary
+ 22. Fast Model Removal Summary
+ 23. Fast Model Minimum Pulse Width Summary
+ 24. Fast Model Setup: 'inst1|altpll_component|pll|clk[0]'
+ 25. Fast Model Hold: 'inst1|altpll_component|pll|clk[0]'
+ 26. Fast Model Minimum Pulse Width: 'inst1|altpll_component|pll|clk[0]'
+ 27. Fast Model Minimum Pulse Width: 'inclk0'
+ 28. Setup Times
+ 29. Hold Times
+ 30. Clock to Output Times
+ 31. Minimum Clock to Output Times
+ 32. Multicorner Timing Analysis Summary
+ 33. Setup Times
+ 34. Hold Times
+ 35. Clock to Output Times
+ 36. Minimum Clock to Output Times
+ 37. Setup Transfers
+ 38. Hold Transfers
+ 39. Report TCCS
+ 40. Report RSKM
+ 41. Unconstrained Paths
+ 42. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                      ;
++--------------------+---------------------------------------------------+
+; Quartus II Version ; Version 11.0 Build 157 04/27/2011 SJ Full Version ;
+; Revision Name      ; ep2adc                                            ;
+; Device Family      ; Cyclone II                                        ;
+; Device Name        ; EP2C5T144C8                                       ;
+; Timing Models      ; Final                                             ;
+; Delay Model        ; Combined                                          ;
+; Rise/Fall Delays   ; Unavailable                                       ;
++--------------------+---------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2 processors           ; < 0.1%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                                                 ;
++-----------------------------------+-----------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+-------------------------------------+---------------------------------------+
+; Clock Name                        ; Type      ; Period ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source                              ; Targets                               ;
++-----------------------------------+-----------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+-------------------------------------+---------------------------------------+
+; inclk0                            ; Base      ; 20.000 ; 50.0 MHz  ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;                                     ; { inclk0 }                            ;
+; inst1|altpll_component|pll|clk[0] ; Generated ; 2.500  ; 400.0 MHz ; 0.000 ; 1.250  ; 50.00      ; 1         ; 8           ;       ;        ;           ;            ; false    ; inclk0 ; inst1|altpll_component|pll|inclk[0] ; { inst1|altpll_component|pll|clk[0] } ;
++-----------------------------------+-----------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+-------------------------------------+---------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                                  ;
++------------+-----------------+-----------------------------------+-------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                        ; Note                                                  ;
++------------+-----------------+-----------------------------------+-------------------------------------------------------+
+; 693.48 MHz ; 402.58 MHz      ; inst1|altpll_component|pll|clk[0] ; limit due to high minimum pulse width violation (tch) ;
++------------+-----------------+-----------------------------------+-------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------------------------------+
+; Slow Model Setup Summary                                  ;
++-----------------------------------+-------+---------------+
+; Clock                             ; Slack ; End Point TNS ;
++-----------------------------------+-------+---------------+
+; inst1|altpll_component|pll|clk[0] ; 1.058 ; 0.000         ;
++-----------------------------------+-------+---------------+
+
+
++-----------------------------------------------------------+
+; Slow Model Hold Summary                                   ;
++-----------------------------------+-------+---------------+
+; Clock                             ; Slack ; End Point TNS ;
++-----------------------------------+-------+---------------+
+; inst1|altpll_component|pll|clk[0] ; 0.499 ; 0.000         ;
++-----------------------------------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++------------------------------------------------------------+
+; Slow Model Minimum Pulse Width Summary                     ;
++-----------------------------------+--------+---------------+
+; Clock                             ; Slack  ; End Point TNS ;
++-----------------------------------+--------+---------------+
+; inst1|altpll_component|pll|clk[0] ; 0.008  ; 0.000         ;
+; inclk0                            ; 10.000 ; 0.000         ;
++-----------------------------------+--------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'inst1|altpll_component|pll|clk[0]'                                                                                                                          ;
++-------+---------------------------+---------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack ; From Node                 ; To Node                   ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------+---------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; 1.058 ; read_adc:inst|counter[0]  ; read_adc:inst|adc_clk_reg ; inst1|altpll_component|pll|clk[0] ; inst1|altpll_component|pll|clk[0] ; 2.500        ; 0.000      ; 1.482      ;
+; 1.485 ; read_adc:inst|counter[0]  ; read_adc:inst|counter[1]  ; inst1|altpll_component|pll|clk[0] ; inst1|altpll_component|pll|clk[0] ; 2.500        ; 0.000      ; 1.055      ;
+; 1.487 ; read_adc:inst|counter[1]  ; read_adc:inst|adc_clk_reg ; inst1|altpll_component|pll|clk[0] ; inst1|altpll_component|pll|clk[0] ; 2.500        ; 0.000      ; 1.053      ;
+; 1.735 ; read_adc:inst|counter[0]  ; read_adc:inst|counter[0]  ; inst1|altpll_component|pll|clk[0] ; inst1|altpll_component|pll|clk[0] ; 2.500        ; 0.000      ; 0.805      ;
+; 1.735 ; read_adc:inst|adc_clk_reg ; read_adc:inst|adc_clk_reg ; inst1|altpll_component|pll|clk[0] ; inst1|altpll_component|pll|clk[0] ; 2.500        ; 0.000      ; 0.805      ;
+; 1.735 ; read_adc:inst|counter[1]  ; read_adc:inst|counter[1]  ; inst1|altpll_component|pll|clk[0] ; inst1|altpll_component|pll|clk[0] ; 2.500        ; 0.000      ; 0.805      ;
++-------+---------------------------+---------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'inst1|altpll_component|pll|clk[0]'                                                                                                                           ;
++-------+---------------------------+---------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack ; From Node                 ; To Node                   ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------+---------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; 0.499 ; read_adc:inst|adc_clk_reg ; read_adc:inst|adc_clk_reg ; inst1|altpll_component|pll|clk[0] ; inst1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; read_adc:inst|counter[0]  ; read_adc:inst|counter[0]  ; inst1|altpll_component|pll|clk[0] ; inst1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.805      ;
+; 0.499 ; read_adc:inst|counter[1]  ; read_adc:inst|counter[1]  ; inst1|altpll_component|pll|clk[0] ; inst1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.805      ;
+; 0.747 ; read_adc:inst|counter[1]  ; read_adc:inst|adc_clk_reg ; inst1|altpll_component|pll|clk[0] ; inst1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.053      ;
+; 0.749 ; read_adc:inst|counter[0]  ; read_adc:inst|counter[1]  ; inst1|altpll_component|pll|clk[0] ; inst1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.055      ;
+; 1.176 ; read_adc:inst|counter[0]  ; read_adc:inst|adc_clk_reg ; inst1|altpll_component|pll|clk[0] ; inst1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 1.482      ;
++-------+---------------------------+---------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'inst1|altpll_component|pll|clk[0]'                                                                                       ;
++-------+--------------+----------------+------------------+-----------------------------------+------------+-----------------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock                             ; Clock Edge ; Target                                        ;
++-------+--------------+----------------+------------------+-----------------------------------+------------+-----------------------------------------------+
+; 0.008 ; 1.250        ; 1.242          ; High Pulse Width ; inst1|altpll_component|pll|clk[0] ; Rise       ; read_adc:inst|adc_clk_reg                     ;
+; 0.008 ; 1.250        ; 1.242          ; Low Pulse Width  ; inst1|altpll_component|pll|clk[0] ; Rise       ; read_adc:inst|adc_clk_reg                     ;
+; 0.008 ; 1.250        ; 1.242          ; High Pulse Width ; inst1|altpll_component|pll|clk[0] ; Rise       ; read_adc:inst|counter[0]                      ;
+; 0.008 ; 1.250        ; 1.242          ; Low Pulse Width  ; inst1|altpll_component|pll|clk[0] ; Rise       ; read_adc:inst|counter[0]                      ;
+; 0.008 ; 1.250        ; 1.242          ; High Pulse Width ; inst1|altpll_component|pll|clk[0] ; Rise       ; read_adc:inst|counter[1]                      ;
+; 0.008 ; 1.250        ; 1.242          ; Low Pulse Width  ; inst1|altpll_component|pll|clk[0] ; Rise       ; read_adc:inst|counter[1]                      ;
+; 1.250 ; 1.250        ; 0.000          ; High Pulse Width ; inst1|altpll_component|pll|clk[0] ; Rise       ; inst1|altpll_component|_clk0~clkctrl|inclk[0] ;
+; 1.250 ; 1.250        ; 0.000          ; Low Pulse Width  ; inst1|altpll_component|pll|clk[0] ; Rise       ; inst1|altpll_component|_clk0~clkctrl|inclk[0] ;
+; 1.250 ; 1.250        ; 0.000          ; High Pulse Width ; inst1|altpll_component|pll|clk[0] ; Rise       ; inst1|altpll_component|_clk0~clkctrl|outclk   ;
+; 1.250 ; 1.250        ; 0.000          ; Low Pulse Width  ; inst1|altpll_component|pll|clk[0] ; Rise       ; inst1|altpll_component|_clk0~clkctrl|outclk   ;
+; 1.250 ; 1.250        ; 0.000          ; High Pulse Width ; inst1|altpll_component|pll|clk[0] ; Rise       ; inst|adc_clk_reg|clk                          ;
+; 1.250 ; 1.250        ; 0.000          ; Low Pulse Width  ; inst1|altpll_component|pll|clk[0] ; Rise       ; inst|adc_clk_reg|clk                          ;
+; 1.250 ; 1.250        ; 0.000          ; High Pulse Width ; inst1|altpll_component|pll|clk[0] ; Rise       ; inst|counter[0]|clk                           ;
+; 1.250 ; 1.250        ; 0.000          ; Low Pulse Width  ; inst1|altpll_component|pll|clk[0] ; Rise       ; inst|counter[0]|clk                           ;
+; 1.250 ; 1.250        ; 0.000          ; High Pulse Width ; inst1|altpll_component|pll|clk[0] ; Rise       ; inst|counter[1]|clk                           ;
+; 1.250 ; 1.250        ; 0.000          ; Low Pulse Width  ; inst1|altpll_component|pll|clk[0] ; Rise       ; inst|counter[1]|clk                           ;
++-------+--------------+----------------+------------------+-----------------------------------+------------+-----------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'inclk0'                                                                              ;
++--------+--------------+----------------+------------------+--------+------------+-------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                              ;
++--------+--------------+----------------+------------------+--------+------------+-------------------------------------+
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; inclk0 ; Rise       ; inclk0|combout                      ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; inclk0 ; Rise       ; inclk0|combout                      ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; inclk0 ; Rise       ; inst1|altpll_component|pll|clk[0]   ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; inclk0 ; Rise       ; inst1|altpll_component|pll|clk[0]   ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; inclk0 ; Rise       ; inst1|altpll_component|pll|inclk[0] ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; inclk0 ; Rise       ; inst1|altpll_component|pll|inclk[0] ;
+; 17.059 ; 20.000       ; 2.941          ; Port Rate        ; inclk0 ; Rise       ; inclk0                              ;
++--------+--------------+----------------+------------------+--------+------------+-------------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Setup Times                                                                             ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference                   ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; rst_n     ; inclk0     ; 7.997 ; 7.997 ; Rise       ; inst1|altpll_component|pll|clk[0] ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Hold Times                                                                                ;
++-----------+------------+--------+--------+------------+-----------------------------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference                   ;
++-----------+------------+--------+--------+------------+-----------------------------------+
+; rst_n     ; inclk0     ; -7.354 ; -7.354 ; Rise       ; inst1|altpll_component|pll|clk[0] ;
++-----------+------------+--------+--------+------------+-----------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                   ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference                   ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; adc_clk   ; inclk0     ; 6.283 ; 6.283 ; Rise       ; inst1|altpll_component|pll|clk[0] ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference                   ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; adc_clk   ; inclk0     ; 6.283 ; 6.283 ; Rise       ; inst1|altpll_component|pll|clk[0] ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+
+
++-----------------------------------------------------------+
+; Fast Model Setup Summary                                  ;
++-----------------------------------+-------+---------------+
+; Clock                             ; Slack ; End Point TNS ;
++-----------------------------------+-------+---------------+
+; inst1|altpll_component|pll|clk[0] ; 2.015 ; 0.000         ;
++-----------------------------------+-------+---------------+
+
+
++-----------------------------------------------------------+
+; Fast Model Hold Summary                                   ;
++-----------------------------------+-------+---------------+
+; Clock                             ; Slack ; End Point TNS ;
++-----------------------------------+-------+---------------+
+; inst1|altpll_component|pll|clk[0] ; 0.215 ; 0.000         ;
++-----------------------------------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++------------------------------------------------------------+
+; Fast Model Minimum Pulse Width Summary                     ;
++-----------------------------------+--------+---------------+
+; Clock                             ; Slack  ; End Point TNS ;
++-----------------------------------+--------+---------------+
+; inst1|altpll_component|pll|clk[0] ; 0.250  ; 0.000         ;
+; inclk0                            ; 10.000 ; 0.000         ;
++-----------------------------------+--------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'inst1|altpll_component|pll|clk[0]'                                                                                                                          ;
++-------+---------------------------+---------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack ; From Node                 ; To Node                   ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------+---------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; 2.015 ; read_adc:inst|counter[0]  ; read_adc:inst|adc_clk_reg ; inst1|altpll_component|pll|clk[0] ; inst1|altpll_component|pll|clk[0] ; 2.500        ; 0.000      ; 0.517      ;
+; 2.137 ; read_adc:inst|counter[0]  ; read_adc:inst|counter[1]  ; inst1|altpll_component|pll|clk[0] ; inst1|altpll_component|pll|clk[0] ; 2.500        ; 0.000      ; 0.395      ;
+; 2.138 ; read_adc:inst|counter[1]  ; read_adc:inst|adc_clk_reg ; inst1|altpll_component|pll|clk[0] ; inst1|altpll_component|pll|clk[0] ; 2.500        ; 0.000      ; 0.394      ;
+; 2.165 ; read_adc:inst|counter[0]  ; read_adc:inst|counter[0]  ; inst1|altpll_component|pll|clk[0] ; inst1|altpll_component|pll|clk[0] ; 2.500        ; 0.000      ; 0.367      ;
+; 2.165 ; read_adc:inst|adc_clk_reg ; read_adc:inst|adc_clk_reg ; inst1|altpll_component|pll|clk[0] ; inst1|altpll_component|pll|clk[0] ; 2.500        ; 0.000      ; 0.367      ;
+; 2.165 ; read_adc:inst|counter[1]  ; read_adc:inst|counter[1]  ; inst1|altpll_component|pll|clk[0] ; inst1|altpll_component|pll|clk[0] ; 2.500        ; 0.000      ; 0.367      ;
++-------+---------------------------+---------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'inst1|altpll_component|pll|clk[0]'                                                                                                                           ;
++-------+---------------------------+---------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; Slack ; From Node                 ; To Node                   ; Launch Clock                      ; Latch Clock                       ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------+---------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+; 0.215 ; read_adc:inst|adc_clk_reg ; read_adc:inst|adc_clk_reg ; inst1|altpll_component|pll|clk[0] ; inst1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; read_adc:inst|counter[0]  ; read_adc:inst|counter[0]  ; inst1|altpll_component|pll|clk[0] ; inst1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; read_adc:inst|counter[1]  ; read_adc:inst|counter[1]  ; inst1|altpll_component|pll|clk[0] ; inst1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.367      ;
+; 0.242 ; read_adc:inst|counter[1]  ; read_adc:inst|adc_clk_reg ; inst1|altpll_component|pll|clk[0] ; inst1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.394      ;
+; 0.243 ; read_adc:inst|counter[0]  ; read_adc:inst|counter[1]  ; inst1|altpll_component|pll|clk[0] ; inst1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.395      ;
+; 0.365 ; read_adc:inst|counter[0]  ; read_adc:inst|adc_clk_reg ; inst1|altpll_component|pll|clk[0] ; inst1|altpll_component|pll|clk[0] ; 0.000        ; 0.000      ; 0.517      ;
++-------+---------------------------+---------------------------+-----------------------------------+-----------------------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'inst1|altpll_component|pll|clk[0]'                                                                                       ;
++-------+--------------+----------------+------------------+-----------------------------------+------------+-----------------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock                             ; Clock Edge ; Target                                        ;
++-------+--------------+----------------+------------------+-----------------------------------+------------+-----------------------------------------------+
+; 0.250 ; 1.250        ; 1.000          ; High Pulse Width ; inst1|altpll_component|pll|clk[0] ; Rise       ; read_adc:inst|adc_clk_reg                     ;
+; 0.250 ; 1.250        ; 1.000          ; Low Pulse Width  ; inst1|altpll_component|pll|clk[0] ; Rise       ; read_adc:inst|adc_clk_reg                     ;
+; 0.250 ; 1.250        ; 1.000          ; High Pulse Width ; inst1|altpll_component|pll|clk[0] ; Rise       ; read_adc:inst|counter[0]                      ;
+; 0.250 ; 1.250        ; 1.000          ; Low Pulse Width  ; inst1|altpll_component|pll|clk[0] ; Rise       ; read_adc:inst|counter[0]                      ;
+; 0.250 ; 1.250        ; 1.000          ; High Pulse Width ; inst1|altpll_component|pll|clk[0] ; Rise       ; read_adc:inst|counter[1]                      ;
+; 0.250 ; 1.250        ; 1.000          ; Low Pulse Width  ; inst1|altpll_component|pll|clk[0] ; Rise       ; read_adc:inst|counter[1]                      ;
+; 1.250 ; 1.250        ; 0.000          ; High Pulse Width ; inst1|altpll_component|pll|clk[0] ; Rise       ; inst1|altpll_component|_clk0~clkctrl|inclk[0] ;
+; 1.250 ; 1.250        ; 0.000          ; Low Pulse Width  ; inst1|altpll_component|pll|clk[0] ; Rise       ; inst1|altpll_component|_clk0~clkctrl|inclk[0] ;
+; 1.250 ; 1.250        ; 0.000          ; High Pulse Width ; inst1|altpll_component|pll|clk[0] ; Rise       ; inst1|altpll_component|_clk0~clkctrl|outclk   ;
+; 1.250 ; 1.250        ; 0.000          ; Low Pulse Width  ; inst1|altpll_component|pll|clk[0] ; Rise       ; inst1|altpll_component|_clk0~clkctrl|outclk   ;
+; 1.250 ; 1.250        ; 0.000          ; High Pulse Width ; inst1|altpll_component|pll|clk[0] ; Rise       ; inst|adc_clk_reg|clk                          ;
+; 1.250 ; 1.250        ; 0.000          ; Low Pulse Width  ; inst1|altpll_component|pll|clk[0] ; Rise       ; inst|adc_clk_reg|clk                          ;
+; 1.250 ; 1.250        ; 0.000          ; High Pulse Width ; inst1|altpll_component|pll|clk[0] ; Rise       ; inst|counter[0]|clk                           ;
+; 1.250 ; 1.250        ; 0.000          ; Low Pulse Width  ; inst1|altpll_component|pll|clk[0] ; Rise       ; inst|counter[0]|clk                           ;
+; 1.250 ; 1.250        ; 0.000          ; High Pulse Width ; inst1|altpll_component|pll|clk[0] ; Rise       ; inst|counter[1]|clk                           ;
+; 1.250 ; 1.250        ; 0.000          ; Low Pulse Width  ; inst1|altpll_component|pll|clk[0] ; Rise       ; inst|counter[1]|clk                           ;
++-------+--------------+----------------+------------------+-----------------------------------+------------+-----------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'inclk0'                                                                              ;
++--------+--------------+----------------+------------------+--------+------------+-------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock  ; Clock Edge ; Target                              ;
++--------+--------------+----------------+------------------+--------+------------+-------------------------------------+
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; inclk0 ; Rise       ; inclk0|combout                      ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; inclk0 ; Rise       ; inclk0|combout                      ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; inclk0 ; Rise       ; inst1|altpll_component|pll|clk[0]   ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; inclk0 ; Rise       ; inst1|altpll_component|pll|clk[0]   ;
+; 10.000 ; 10.000       ; 0.000          ; High Pulse Width ; inclk0 ; Rise       ; inst1|altpll_component|pll|inclk[0] ;
+; 10.000 ; 10.000       ; 0.000          ; Low Pulse Width  ; inclk0 ; Rise       ; inst1|altpll_component|pll|inclk[0] ;
+; 17.620 ; 20.000       ; 2.380          ; Port Rate        ; inclk0 ; Rise       ; inclk0                              ;
++--------+--------------+----------------+------------------+--------+------------+-------------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Setup Times                                                                             ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference                   ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; rst_n     ; inclk0     ; 3.839 ; 3.839 ; Rise       ; inst1|altpll_component|pll|clk[0] ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Hold Times                                                                                ;
++-----------+------------+--------+--------+------------+-----------------------------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference                   ;
++-----------+------------+--------+--------+------------+-----------------------------------+
+; rst_n     ; inclk0     ; -3.617 ; -3.617 ; Rise       ; inst1|altpll_component|pll|clk[0] ;
++-----------+------------+--------+--------+------------+-----------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                   ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference                   ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; adc_clk   ; inclk0     ; 2.327 ; 2.327 ; Rise       ; inst1|altpll_component|pll|clk[0] ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference                   ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; adc_clk   ; inclk0     ; 2.327 ; 2.327 ; Rise       ; inst1|altpll_component|pll|clk[0] ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                           ;
++------------------------------------+-------+-------+----------+---------+---------------------+
+; Clock                              ; Setup ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------------------------+-------+-------+----------+---------+---------------------+
+; Worst-case Slack                   ; 1.058 ; 0.215 ; N/A      ; N/A     ; 0.008               ;
+;  inclk0                            ; N/A   ; N/A   ; N/A      ; N/A     ; 10.000              ;
+;  inst1|altpll_component|pll|clk[0] ; 1.058 ; 0.215 ; N/A      ; N/A     ; 0.008               ;
+; Design-wide TNS                    ; 0.0   ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  inclk0                            ; N/A   ; N/A   ; N/A      ; N/A     ; 0.000               ;
+;  inst1|altpll_component|pll|clk[0] ; 0.000 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
++------------------------------------+-------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Setup Times                                                                             ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference                   ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; rst_n     ; inclk0     ; 7.997 ; 7.997 ; Rise       ; inst1|altpll_component|pll|clk[0] ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Hold Times                                                                                ;
++-----------+------------+--------+--------+------------+-----------------------------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference                   ;
++-----------+------------+--------+--------+------------+-----------------------------------+
+; rst_n     ; inclk0     ; -3.617 ; -3.617 ; Rise       ; inst1|altpll_component|pll|clk[0] ;
++-----------+------------+--------+--------+------------+-----------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                   ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference                   ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; adc_clk   ; inclk0     ; 6.283 ; 6.283 ; Rise       ; inst1|altpll_component|pll|clk[0] ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference                   ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+; adc_clk   ; inclk0     ; 2.327 ; 2.327 ; Rise       ; inst1|altpll_component|pll|clk[0] ;
++-----------+------------+-------+-------+------------+-----------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                   ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+; From Clock                        ; To Clock                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+; inst1|altpll_component|pll|clk[0] ; inst1|altpll_component|pll|clk[0] ; 6        ; 0        ; 0        ; 0        ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                    ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+; From Clock                        ; To Clock                          ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+; inst1|altpll_component|pll|clk[0] ; inst1|altpll_component|pll|clk[0] ; 6        ; 0        ; 0        ; 0        ;
++-----------------------------------+-----------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 3     ; 3    ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 1     ; 1    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II TimeQuest Timing Analyzer
+    Info: Version 11.0 Build 157 04/27/2011 SJ Full Version
+    Info: Processing started: Wed Jun 05 20:15:37 2019
+Info: Command: quartus_sta ep2adc -c ep2adc
+Info: qsta_default_script.tcl version: #1
+Info: Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info: Low junction temperature is 0 degrees C
+Info: High junction temperature is 85 degrees C
+Critical Warning: Synopsys Design Constraints File file not found: 'ep2adc.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info: No user constrained generated clocks found in the design. Calling "derive_pll_clocks -create_base_clocks"
+Info: Deriving PLL Clocks
+    Info: create_clock -period 20.000 -waveform {0.000 10.000} -name inclk0 inclk0
+    Info: create_generated_clock -source {inst1|altpll_component|pll|inclk[0]} -multiply_by 8 -duty_cycle 50.00 -name {inst1|altpll_component|pll|clk[0]} {inst1|altpll_component|pll|clk[0]}
+Info: No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info: The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Info: Analyzing Slow Model
+Info: Worst-case setup slack is 1.058
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     1.058         0.000 inst1|altpll_component|pll|clk[0] 
+Info: Worst-case hold slack is 0.499
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.499         0.000 inst1|altpll_component|pll|clk[0] 
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is 0.008
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.008         0.000 inst1|altpll_component|pll|clk[0] 
+    Info:    10.000         0.000 inclk0 
+Info: The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info: Started post-fitting delay annotation
+Warning: Found 1 output pins without output pin load capacitance assignment
+    Info: Pin "adc_clk" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
+Info: Delay annotation completed successfully
+Info: Worst-case setup slack is 2.015
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     2.015         0.000 inst1|altpll_component|pll|clk[0] 
+Info: Worst-case hold slack is 0.215
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.215         0.000 inst1|altpll_component|pll|clk[0] 
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is 0.250
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.250         0.000 inst1|altpll_component|pll|clk[0] 
+    Info:    10.000         0.000 inclk0 
+Info: The selected device family is not supported by the report_metastability command.
+Info: Design is not fully constrained for setup requirements
+Info: Design is not fully constrained for hold requirements
+Info: Quartus II TimeQuest Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 252 megabytes
+    Info: Processing ended: Wed Jun 05 20:15:38 2019
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
